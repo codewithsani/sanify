@@ -15,16 +15,19 @@
 }
 
 /* Typography */
+
 html {
+  /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   color: var(--color-body);
 }
+
 h1,
 h2,
 h3 {
@@ -35,9 +38,11 @@ h3 {
 h1 {
   font-size: 7rem;
 }
+
 h2 {
   font-size: 4rem;
 }
+
 h3 {
   font-size: 3rem;
 }
@@ -50,12 +55,15 @@ p {
   body {
     font-size: 1.8rem;
   }
+
   h1 {
     font-size: 8rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   h3 {
     font-size: 2.4rem;
   }
@@ -65,28 +73,31 @@ p {
 a {
   text-decoration: none;
 }
+
 .link-arrow {
   color: var(--color-accent);
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
 }
+
 .link-arrow::after {
   content: "-->";
   margin-left: 5px;
   transition: margin 0.15s;
 }
+
 .link-arrow:hover::after {
   margin-left: 10px;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
   }
 }
-
 /* Badges */
+
 .badge {
   border-radius: 20px;
   font-size: 2rem;
@@ -94,6 +105,7 @@ a {
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
+
 .badge--primary {
   background: var(--color-primary);
   color: #fff;
@@ -113,11 +125,12 @@ a {
   .badge {
     font-size: 1.5rem;
   }
+
   .badge--small {
     font-size: 1.2rem;
   }
 }
-
+/* Lists */
 .list {
   list-style: none;
   padding-left: 0;
@@ -139,12 +152,11 @@ a {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
   }
 }
-
 /* Icons */
 .icon {
   width: 40px;
@@ -164,7 +176,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 /* Buttons */
 .btn {
   border-radius: 40px;
@@ -183,6 +194,7 @@ a {
   background: var(--color-primary);
   color: #fff;
 }
+
 .btn--primary:hover {
   background: #3a8ffd;
 }
@@ -191,17 +203,20 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
+
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
   background: var(--color-accent);
   color: #fff;
 }
+
 .btn--accent:hover {
   background: #ec3000;
 }
+
 .btn--outline {
   background: #fff;
   color: var(--color-headings);
@@ -225,7 +240,6 @@ a {
 }
 
 /* Inputs */
-
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -250,6 +264,7 @@ a {
   flex-grow: 1;
   padding: 1.5rem 1rem;
 }
+
 .input-group .btn {
   margin: 4px;
 }
@@ -259,7 +274,6 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Cards */
 .card {
   border-radius: 7px;
@@ -272,6 +286,11 @@ a {
   padding: 2rem 3rem;
 }
 
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
@@ -282,7 +301,6 @@ a {
 }
 
 /* Plans */
-
 .plan__name {
   color: #fff;
   margin: 0;
@@ -303,7 +321,7 @@ a {
 
 .plan__description {
   font-size: 2rem;
-  font-weight: 300px;
+  font-weight: 300;
   letter-spacing: 1px;
   display: block;
 }
@@ -325,7 +343,7 @@ a {
   right: 5%;
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
   }
@@ -341,4 +359,20 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+}
+/* Media */
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
 }
